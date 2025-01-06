@@ -1,0 +1,28 @@
+Run the Bot in the Background
+To ensure your bot runs continuously, use a process manager like pm2:
+
+Install pm2:
+
+bash
+Copy code
+npm install -g pm2
+Start your bot with pm2:
+
+bash
+Copy code
+pm2 start index.js --name "discord-bot"
+Set up pm2 to restart on VPS reboot:
+
+bash
+Copy code
+pm2 startup
+pm2 save
+
+
+
+Monitor Logs
+Use pm2 to check logs and manage the bot:
+
+bash
+Copy code
+pm2 logs discord-bot
